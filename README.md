@@ -1,4 +1,4 @@
-# es6-starter
+# ecma-script
 ES6 Concepts
 
 - webpack
