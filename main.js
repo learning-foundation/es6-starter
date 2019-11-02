@@ -18,11 +18,17 @@ class TodoList extends List {
   showUser() {
     console.log(this.user);
   }
+
+  static sum(a, b) {    
+    console.log('static method called');
+    return a + b;
+  }
 }
 
 var MyList = new TodoList();
 
 document.getElementById('newtodo').onclick = function() {
-  MyList.add('new todo 2');
+  MyList.add('new todo');
+  console.log(TodoList.sum(5, 18));
   MyList.showUser();
 }

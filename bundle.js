@@ -58,6 +58,12 @@ function (_List) {
     value: function showUser() {
       console.log(this.user);
     }
+  }], [{
+    key: "sum",
+    value: function sum(a, b) {
+      console.log('static method called');
+      return a + b;
+    }
   }]);
 
   return TodoList;
@@ -66,6 +72,7 @@ function (_List) {
 var MyList = new TodoList();
 
 document.getElementById('newtodo').onclick = function () {
-  MyList.add('new todo 2');
+  MyList.add('new todo');
+  console.log(TodoList.sum(5, 18));
   MyList.showUser();
 };
