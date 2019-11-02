@@ -21,7 +21,8 @@ class TodoList extends List {
 
   static sum(a, b) {    
     console.log('static method called');
-    return a + b;
+    const c = a + b;
+    return c;
   }
 }
 

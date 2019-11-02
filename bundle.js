@@ -62,7 +62,8 @@ function (_List) {
     key: "sum",
     value: function sum(a, b) {
       console.log('static method called');
-      return a + b;
+      var c = a + b;
+      return c;
     }
   }]);
 
