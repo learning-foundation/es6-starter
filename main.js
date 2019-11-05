@@ -12,15 +12,44 @@ class List {
 class TodoList extends List {
   constructor() {
     super();
-    this.user = 'vserpa';
+    this.user = "vserpa";
+    this.arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   }
 
   showUser() {
     console.log(this.user);
   }
 
-  static sum(a, b) {    
-    console.log('static method called');
+  showArray() {
+    const newArr = this.arr.map(function(item, index) {
+      return item * index;
+    });
+    console.log(newArr);
+  }
+
+  showArrayReduced() {
+    const sum = this.arr.reduce(function(total, next) {
+      return total + next;
+    });
+    console.log(sum);
+  }
+
+  showArrayFiltered() {
+    const filtered = this.arr.filter(function(item) {
+      return item % 2 === 0;
+    });
+    console.log(filtered);
+  }
+
+  showArrayFound() {
+    const found = this.arr.find(function(item) {
+      return item === 4;
+    });
+    console.log(found);
+  }
+
+  static sum(a, b) {
+    console.log("static method called");
     const c = a + b;
     return c;
   }
@@ -28,8 +57,12 @@ class TodoList extends List {
 
 var MyList = new TodoList();
 
-document.getElementById('newtodo').onclick = function() {
-  MyList.add('new todo');
+document.getElementById("newtodo").onclick = function() {
+  MyList.add("new todo");
   console.log(TodoList.sum(5, 18));
   MyList.showUser();
-}
+  MyList.showArray();
+  MyList.showArrayReduced();
+  MyList.showArrayFiltered();
+  MyList.showArrayFound();
+};

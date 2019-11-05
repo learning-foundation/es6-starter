@@ -49,7 +49,8 @@ function (_List) {
     _classCallCheck(this, TodoList);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(TodoList).call(this));
-    _this.user = 'vserpa';
+    _this.user = "vserpa";
+    _this.arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     return _this;
   }
 
@@ -58,10 +59,42 @@ function (_List) {
     value: function showUser() {
       console.log(this.user);
     }
+  }, {
+    key: "showArray",
+    value: function showArray() {
+      var newArr = this.arr.map(function (item, index) {
+        return item * index;
+      });
+      console.log(newArr);
+    }
+  }, {
+    key: "showArrayReduced",
+    value: function showArrayReduced() {
+      var sum = this.arr.reduce(function (total, next) {
+        return total + next;
+      });
+      console.log(sum);
+    }
+  }, {
+    key: "showArrayFiltered",
+    value: function showArrayFiltered() {
+      var filtered = this.arr.filter(function (item) {
+        return item % 2 === 0;
+      });
+      console.log(filtered);
+    }
+  }, {
+    key: "showArrayFound",
+    value: function showArrayFound() {
+      var found = this.arr.find(function (item) {
+        return item === 4;
+      });
+      console.log(found);
+    }
   }], [{
     key: "sum",
     value: function sum(a, b) {
-      console.log('static method called');
+      console.log("static method called");
       var c = a + b;
       return c;
     }
@@ -72,8 +105,12 @@ function (_List) {
 
 var MyList = new TodoList();
 
-document.getElementById('newtodo').onclick = function () {
-  MyList.add('new todo');
+document.getElementById("newtodo").onclick = function () {
+  MyList.add("new todo");
   console.log(TodoList.sum(5, 18));
   MyList.showUser();
+  MyList.showArray();
+  MyList.showArrayReduced();
+  MyList.showArrayFiltered();
+  MyList.showArrayFound();
 };
