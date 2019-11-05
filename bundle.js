@@ -106,6 +106,14 @@ function (_List) {
       var c = a + b;
       return c;
     }
+  }, {
+    key: "sumDefault",
+    value: function sumDefault() {
+      var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+      console.log("static method called");
+      return a + b;
+    }
   }]);
 
   return TodoList;
@@ -115,7 +123,8 @@ var MyList = new TodoList();
 
 document.getElementById("newtodo").onclick = function () {
   MyList.add("new todo");
-  console.log(TodoList.sum(5, 18));
+  console.log(TodoList.sum(2, 3));
+  console.log(TodoList.sumDefault(1));
   MyList.showUser();
   MyList.showArray();
   MyList.showArrayReduced();

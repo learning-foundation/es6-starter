@@ -58,13 +58,19 @@ class TodoList extends List {
     const c = a + b;
     return c;
   }
+
+  static sumDefault(a = 0, b = 0) {
+    console.log("static method called");
+    return a + b;
+  }
 }
 
 var MyList = new TodoList();
 
 document.getElementById("newtodo").onclick = function() {
   MyList.add("new todo");
-  console.log(TodoList.sum(5, 18));
+  console.log(TodoList.sum(2, 3));
+  console.log(TodoList.sumDefault(1));
   MyList.showUser();
   MyList.showArray();
   MyList.showArrayReduced();

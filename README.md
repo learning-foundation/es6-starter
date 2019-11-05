@@ -7,6 +7,7 @@ ES6 Concepts
 - const and let
 - array operations (map, reduce, filter, find)
 - arrow functions
+- default values
 - restructuring
 - rest/spread
 - import/export
