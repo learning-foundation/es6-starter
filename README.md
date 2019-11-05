@@ -11,5 +11,6 @@ ES6 Concepts
 - restructuring
 - rest/spread
 - template literals
+- object short syntax
 - import/export
 - async/await
