@@ -48,6 +48,11 @@ class TodoList extends List {
     console.log(found);
   }
 
+  showArrayWithArrowFunction() {
+    const newArr = this.arr.map(item => item * 2);
+    console.log(newArr);
+  }
+
   static sum(a, b) {
     console.log("static method called");
     const c = a + b;
@@ -65,4 +70,5 @@ document.getElementById("newtodo").onclick = function() {
   MyList.showArrayReduced();
   MyList.showArrayFiltered();
   MyList.showArrayFound();
+  MyList.showArrayWithArrowFunction();
 };

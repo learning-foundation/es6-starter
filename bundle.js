@@ -91,6 +91,14 @@ function (_List) {
       });
       console.log(found);
     }
+  }, {
+    key: "showArrayWithArrowFunction",
+    value: function showArrayWithArrowFunction() {
+      var newArr = this.arr.map(function (item) {
+        return item * 2;
+      });
+      console.log(newArr);
+    }
   }], [{
     key: "sum",
     value: function sum(a, b) {
@@ -113,4 +121,5 @@ document.getElementById("newtodo").onclick = function () {
   MyList.showArrayReduced();
   MyList.showArrayFiltered();
   MyList.showArrayFound();
+  MyList.showArrayWithArrowFunction();
 };
