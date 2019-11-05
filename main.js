@@ -14,10 +14,27 @@ class TodoList extends List {
     super();
     this.user = "vserpa";
     this.arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    this.admin = {
+      name: "Vinicius",
+      age: "29",
+      address: {
+        city: "Campinas",
+        state: "SP"
+      }
+    };
   }
 
   showUser() {
     console.log(this.user);
+  }
+
+  showAdmin() {
+    const {
+      name,
+      age,
+      address: { city }
+    } = this.admin;
+    console.log(name, age, city);
   }
 
   showArray() {
@@ -72,6 +89,7 @@ document.getElementById("newtodo").onclick = function() {
   console.log(TodoList.sum(2, 3));
   console.log(TodoList.sumDefault(1));
   MyList.showUser();
+  MyList.showAdmin();
   MyList.showArray();
   MyList.showArrayReduced();
   MyList.showArrayFiltered();

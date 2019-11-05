@@ -51,6 +51,14 @@ function (_List) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(TodoList).call(this));
     _this.user = "vserpa";
     _this.arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    _this.admin = {
+      name: "Vinicius",
+      age: "29",
+      address: {
+        city: "Campinas",
+        state: "SP"
+      }
+    };
     return _this;
   }
 
@@ -58,6 +66,15 @@ function (_List) {
     key: "showUser",
     value: function showUser() {
       console.log(this.user);
+    }
+  }, {
+    key: "showAdmin",
+    value: function showAdmin() {
+      var _this$admin = this.admin,
+          name = _this$admin.name,
+          age = _this$admin.age,
+          city = _this$admin.address.city;
+      console.log(name, age, city);
     }
   }, {
     key: "showArray",
@@ -126,6 +143,7 @@ document.getElementById("newtodo").onclick = function () {
   console.log(TodoList.sum(2, 3));
   console.log(TodoList.sumDefault(1));
   MyList.showUser();
+  MyList.showAdmin();
   MyList.showArray();
   MyList.showArrayReduced();
   MyList.showArrayFiltered();
