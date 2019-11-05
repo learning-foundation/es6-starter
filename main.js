@@ -70,6 +70,23 @@ class TodoList extends List {
     console.log(newArr);
   }
 
+  showWithRest() {
+    const { name, ...more } = this.admin;
+    console.log(more);
+  }
+
+  showWithSpread() {
+    const arr1 = [1, 2, 3];
+    const arr2 = [2, 3, 4];
+    const arr3 = [...arr1, ...arr2];
+    console.log(arr3);
+  }
+
+  showObjectWithSpread() {
+    const admin2 = { ...this.admin, name: "Mestre" };
+    console.log(admin2);
+  }
+
   static sum(a, b) {
     console.log("static method called");
     const c = a + b;
@@ -95,4 +112,7 @@ document.getElementById("newtodo").onclick = function() {
   MyList.showArrayFiltered();
   MyList.showArrayFound();
   MyList.showArrayWithArrowFunction();
+  MyList.showWithRest();
+  MyList.showWithSpread();
+  MyList.showObjectWithSpread();
 };
