@@ -87,6 +87,11 @@ class TodoList extends List {
     console.log(admin2);
   }
 
+  showObjectWithTemplateLiterals() {
+    const { name, age } = this.admin;
+    console.log(`The admin is ${name} and he have ${age}`);
+  }
+
   static sum(a, b) {
     console.log("static method called");
     const c = a + b;
@@ -115,4 +120,5 @@ document.getElementById("newtodo").onclick = function() {
   MyList.showWithRest();
   MyList.showWithSpread();
   MyList.showObjectWithSpread();
+  MyList.showObjectWithTemplateLiterals();
 };

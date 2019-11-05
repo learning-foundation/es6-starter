@@ -10,5 +10,6 @@ ES6 Concepts
 - default values
 - restructuring
 - rest/spread
+- template literals
 - import/export
 - async/await
