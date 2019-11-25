@@ -1,3 +1,5 @@
+import { sum } from './functions';
+
 class List {
   constructor() {
     this.data = [];
@@ -134,3 +136,5 @@ document.getElementById("newtodo").onclick = function() {
   MyList.showObjectWithTemplateLiterals();
   MyList.showObjectWithShortSyntax();
 };
+
+console.log("The sum of 3 and 4 is " + sum(3, 4));
