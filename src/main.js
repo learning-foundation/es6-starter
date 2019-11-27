@@ -1,4 +1,5 @@
 import { sum } from './functions';
+import { testPromise, testAsync } from './promise';
 
 class List {
   constructor() {
@@ -135,6 +136,8 @@ document.getElementById("newtodo").onclick = function() {
   MyList.showObjectWithSpread();
   MyList.showObjectWithTemplateLiterals();
   MyList.showObjectWithShortSyntax();
+  testPromise();
+  testAsync();
 };
 
 console.log("The sum of 3 and 4 is " + sum(3, 4));
