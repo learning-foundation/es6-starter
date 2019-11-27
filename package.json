@@ -12,11 +12,13 @@
     "@babel/preset-env": "^7.6.3",
     "babel-loader": "^8.0.6",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   },
   "scripts": {
-    "devgen": "babel ./main.js -o ./bundle.js",
-    "devbabel": "babel ./main.js -o ./bundle.js -w",
-    "dev": "webpack --mode=development -w"
+    "build_babel": "babel ./src/main.js -o ./bundle.js",
+    "devbabel": "babel ./src/main.js -o ./bundle.js -w",
+    "build": "webpack --mode=development",
+    "dev": "webpack-dev-server --mode=development"
   }
 }

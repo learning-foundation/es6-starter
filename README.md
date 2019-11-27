@@ -2,7 +2,6 @@
 
 ES6 Concepts
 
-- webpack
 - classes
 - const and let
 - array operations (map, reduce, filter, find)
@@ -14,3 +13,5 @@ ES6 Concepts
 - object short syntax
 - import/export
 - async/await
+- webpack
+- webpack dev server

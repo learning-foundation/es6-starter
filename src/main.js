@@ -3,7 +3,7 @@ import { sum } from './functions';
 class List {
   constructor() {
     this.data = [];
-  }
+  } 
 
   add(data) {
     this.data.push(data);
