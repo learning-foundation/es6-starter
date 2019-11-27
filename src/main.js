@@ -1,5 +1,6 @@
 import { sum } from './functions';
 import { testPromise, testAsync } from './promise';
+import { Api } from './api';
 
 class List {
   constructor() {
@@ -136,6 +137,9 @@ document.getElementById("newtodo").onclick = function() {
   MyList.showObjectWithSpread();
   MyList.showObjectWithTemplateLiterals();
   MyList.showObjectWithShortSyntax();
+
+  Api.getUserInfo("vinicius-serpa");
+
   testPromise();
   testAsync();
 };

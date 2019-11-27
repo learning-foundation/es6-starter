@@ -22,5 +22,8 @@
     "devbabel": "babel ./src/main.js -o ./bundle.js -w",
     "build": "webpack --mode=development",
     "dev": "webpack-dev-server --mode=development"
+  },
+  "dependencies": {
+    "axios": "^0.19.0"
   }
 }
