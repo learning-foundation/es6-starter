@@ -20,23 +20,26 @@ class App {
 
     if (repoInput.length === 0) return;
 
-    const response = await api.get(`/repos/${repoInput}`);
+    try {
+      const response = await api.get(`/repos/${repoInput}`);
+      const {
+        name,
+        description,
+        html_url,
+        owner: { avatar_url }
+      } = response.data;
 
-    const {
-      name,
-      description,
-      html_url,
-      owner: { avatar_url }
-    } = response.data;
+      this.repositories.push({
+        name,
+        description,
+        avatar_url,
+        html_url
+      });
 
-    this.repositories.push({
-      name,
-      description,
-      avatar_url,
-      html_url
-    });
-
-    this.render();
+      this.render();
+    } catch (err) {
+      alert(`The repository ${repoInput} doesn't exists!`);
+    }
   }
 
   render() {
